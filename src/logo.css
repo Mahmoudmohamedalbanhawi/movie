@@ -1,0 +1,11 @@
+.logo span 
+{
+    font-size: 3.2rem;
+}
+
+.logo p 
+{
+    color: var(--color-white-text);
+    font-size: 2.4rem;
+    font-weight: 400;
+}
