@@ -2,17 +2,24 @@ import React from 'react'
 import './index.css'
 import './Movie.css'
 
-export default function Movie() {
+export default function Movie({movies}) {
+  console.log("movie" , movies)
+  if(!movies || movies.length === 0) return <p>No movies found</p>
   return (
     <React.Fragment>
-      <li>
-        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt="Inception"/>
-        <h3>Inception</h3>
+      {movies.map((movie)=>{
+        return (
+          <li key={movie.imdbID} >
+        <img src={movie.Poster} alt={movie.Title}/>
+        <h3>{movie.Title}</h3>
         <div className='flex'>
           <span>🗓</span>
-          <span>2010</span>
+          <span>{movie.Year}</span>
         </div>
       </li>
+        )
+      })}
+      
     </React.Fragment>
   )
 }

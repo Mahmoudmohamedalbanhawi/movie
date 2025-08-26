@@ -4,14 +4,14 @@ import Logo from './logo'
 import './index.css'
 import SearchBtn from "./SearchBtn";
 import NumResult from "./NumResult";
-export default function Navbar()
+export default function Navbar({setQuery})
 {
     return(
         <React.Fragment>
         <div className="navbar">
            <div className="container  d-flex align-items-center " style= {{justifyContent:"space-around"}}>
             <Logo />
-            <SearchBtn/>
+            <SearchBtn setQuery={setQuery}/>
             <NumResult/>
             </div>
            </div>
