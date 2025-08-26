@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './navbar';
 import MoviesList from './MoviesList';
+import WatchedMovies from './WatchedMovies';
 const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -34,7 +35,7 @@ function App() {
 
     <div className='d-flex margin-top-2 justify-content-center main gap-2' >
       <MoviesList/>
-      <MoviesList/>
+      <WatchedMovies/>
     </div>
      
     </React.Fragment>

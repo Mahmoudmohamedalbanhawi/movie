@@ -45,6 +45,10 @@ body
 {
   height: calc(100vh - 7.2rem - 3 * 2.4rem);
 }
+.gap-1
+{
+  gap: 0.8rem;
+}
 
 .gap-2 
 {
