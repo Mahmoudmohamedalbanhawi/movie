@@ -3,7 +3,7 @@ import './index.css'
 import Movie from "./Movie";
 import './MovieList.css'
 import Toggle from "./toggle";
-export default function MoviesList({toggle , error, isOpen , movies , isLoading})
+export default function MoviesList({toggle , getId, error, isOpen , movies , isLoading})
 {
     console.log("loading" , isLoading)
     
@@ -15,7 +15,7 @@ export default function MoviesList({toggle , error, isOpen , movies , isLoading}
                 {error && <div className="error">{error}</div>}
                 <Toggle toggle = {toggle} isOpen={isOpen}/>
                 {!isOpen && (<ul className="list container">
-                {(!isLoading && !error) && <Movie movies = {movies}/>}
+                {(!isLoading && !error) && <Movie getId = {getId} movies = {movies}/>}
             </ul> )}
                
             </div>

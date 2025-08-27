@@ -11,6 +11,10 @@ function App() {
   const [isOpen , setIsOpen] = useState(false);
   const [isLoading , setIsLoading] = useState(false);
   const [error , setError] = useState(null);
+  function getId(id)
+  {
+    console.log("id" , id)
+  }
   function toggle()
   {
     setIsOpen(isOpen => !isOpen);
@@ -45,7 +49,7 @@ function App() {
 
     
     <div className='d-flex margin-top-2 justify-content-center main gap-2' >
-       <MoviesList isLoading={isLoading} error={error} toggle={toggle} movies={movies} isOpen={isOpen}/>
+       <MoviesList getId={getId} isLoading={isLoading} error={error} toggle={toggle} movies={movies} isOpen={isOpen}/>
      
       <WatchedMovies/>
     </div>
